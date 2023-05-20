@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GCM</string>
+    <string name="default_notification_channel_id">channel_id</string>
+</resources>
+
