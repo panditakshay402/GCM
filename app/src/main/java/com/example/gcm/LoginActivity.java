@@ -1,12 +1,17 @@
 package com.example.gcm;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
-public class LoginActivity {
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 
-
-    public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
         private FirebaseAuth firebaseAuth;
 
         @Override
@@ -17,13 +22,13 @@ public class LoginActivity {
             firebaseAuth = FirebaseAuth.getInstance();
 
             // Handle login or registration button click
-            Button buttonLogin = findViewById(R.id.buttonLogin);
+            Button buttonLogin = findViewById(R.id.loginbutton);
             buttonLogin.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     // Get the entered email and password
-                    EditText editTextEmail = findViewById(R.id.editTextEmail);
-                    EditText editTextPassword = findViewById(R.id.editTextPassword);
+                    EditText editTextEmail = findViewById(R.id.emailInput);
+                    EditText editTextPassword = findViewById(R.id.passwordInput);
                     String email = editTextEmail.getText().toString();
                     String password = editTextPassword.getText().toString();
 
@@ -49,5 +54,3 @@ public class LoginActivity {
         }
     }
 
-
-}

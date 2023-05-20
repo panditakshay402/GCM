@@ -69,6 +69,7 @@
         android:textSize="18sp"
         android:textStyle="bold" />
 
+
     <Button
         android:id="@+id/loginbutton"
         android:layout_width="120dp"
@@ -85,10 +86,6 @@
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold" />
-
-
-
-
 
     <LinearLayout
         android:layout_width="match_parent"

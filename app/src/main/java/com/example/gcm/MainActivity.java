@@ -10,9 +10,11 @@ import android.app.NotificationManager;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -105,8 +107,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        // Implement other methods of ChildEventListener
-            // (onChildChanged, onChildRemoved, onChildMoved, onCancelled) as per your requirements
+
         });
 
         // Handle send message button click
@@ -115,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Get the message content from EditText
-                EditText editTextMessage = findViewById(R.id.editTextMessage);
+                EditText editTextMessage = findViewById(R.id.editTextUsername);
                 String messageContent = editTextMessage.getText().toString();
 
                 // Create a new message object
