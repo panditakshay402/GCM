@@ -32,4 +32,12 @@ public class Message {
     public String getContent() {
         return content;
     }
+
+    public boolean isRead() {
+        return false;
+    }
+
+    public void setRead(boolean b) {
+
+    }
 }

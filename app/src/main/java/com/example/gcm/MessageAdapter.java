@@ -2,12 +2,16 @@ package com.example.gcm;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.List;
+
 public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHolder> {
     private List<Message> messageList;
 
     public MessageAdapter(List<Message> messageList) {
         this.messageList = messageList;
     }
+
+
 
     @NonNull
     @Override

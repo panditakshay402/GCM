@@ -1,6 +1,15 @@
 package com.example.gcm;
 
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
+
+import androidx.annotation.NonNull;
+import androidx.core.app.NotificationCompat;
+
 import com.google.firebase.messaging.FirebaseMessagingService;
+import com.google.firebase.messaging.RemoteMessage;
 
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
     @Override
@@ -26,7 +35,8 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                     .setAutoCancel(true);
 
             // Create an intent to open the app when the notification is tapped
-            Intent intent = new Intent(this, MainActivity.class);
+            Intent intent;
+            intent = new Intent(this, MainActivity.class);
             PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
             builder.setContentIntent(pendingIntent);
 

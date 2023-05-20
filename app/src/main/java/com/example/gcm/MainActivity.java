@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private DatabaseReference messagesRef;
     private List<Message> messageList;
     private MessageAdapter messageAdapter;
+    private Calendar FirebaseDatabase;
 
     @Override
     protected void onResume() {
@@ -108,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        });
+
 
         // Handle send message button click
         Button buttonSendMessage = findViewById(R.id.buttonSendMessage);
